@@ -1,5 +1,4 @@
 html, body {
-    width: 100%;
     height: 100%;
     background-color: #121215;
   }
@@ -158,4 +157,32 @@ html, body {
   }
   .mars-spin {
     animation: spin-right 68.7s linear infinite;
+  }
+
+  .frame {
+    margin: -260px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        'title title'
+        'prev back'
+        'credits credits'
+        'sponsor sponsor';
+    grid-gap: 1rem;
+    pointer-events: none;
+    color: #ffff19;
+}
+  
+  .frame a {
+    pointer-events: auto;
+  }
+  
+  .frame__title {
+    grid-area: title;
+    margin: 0;
+    font-weight: inherit;
+  }
+  
+  .frame__credits {
+    grid-area: credits;
   }
